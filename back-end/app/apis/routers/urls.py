@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from apis.services.billview.fetch_bill_detail_view import FetchBillDetailView
+from apis.services.billview.test import fetch_data_from_postgres
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('invoices/', FetchBillDetailView.as_view(), name='fetch-bill-detials-by-id'),
+    path('fetch-data/', fetch_data_from_postgres, name='fetch-data'),
 ]
