@@ -1,0 +1,5 @@
+*/django/*
+*/apienv/*
+*/apptest/*
+*.pyc
+*.sqlite3
